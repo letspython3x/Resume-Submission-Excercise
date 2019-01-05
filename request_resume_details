@@ -3,13 +3,13 @@ from flask import Flask, request
 app = Flask(__name__)
 
 automated_responses = {
-    'Name': 'Mike Kochetov',
-    'Email Address': 'mikekochetovv@gmail.com',
-    'Phone': '7738189838',
+    'Name': 'AB Abhi',
+    'Email Address': 'letspython3.x@gmail.com',
+    'Phone': '8575368593444',
     'Position': 'Full Stack Engineer',
     'Years': '4',
-    'Referrer': 'angel.co',
-    'Degree': "Master's degree - Computer Science",
+    'Referrer': 'xyz company',
+    'Degree': "Bachelor's degree - Computer Science",
     'Status': 'Yes',
     'Resume': 'url/for/resume',
     'Source': 'url/for/resume',

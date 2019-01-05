@@ -17,3 +17,12 @@ in no particular order, to which applicant's server should respond with an appro
     <li>When the test passes a "Submit" button will appear below the test results.</li>
     <li>Click the "Submit" button to submit your application to Balihoo.</li>
 </ul>
+
+### How to use:
+
+```ask_for_resume.py``` : Start this server, that will display a form to enter the url of applicant's service.
+On click of submit, the server will query applicant's web service in random order.
+
+
+```respond_with_resume.py``` : This is a sample micro-service written in flask, that will respond to the above service queries.
+

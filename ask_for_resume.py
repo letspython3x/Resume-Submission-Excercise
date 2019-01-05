@@ -61,7 +61,7 @@ def query():
             for query in queries:
                 response = requests.get(url, params=query)
                 key = query.get('q')
-                value = response.text
+                value = response.text if response.text else "No Response"
                 result[key] = value
             return render_template("result.html", result=result)
 

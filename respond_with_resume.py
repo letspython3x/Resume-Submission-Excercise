@@ -6,9 +6,9 @@ automated_responses = {
     'Name': 'AB Abhi',
     'Email Address': 'letspython3.x@gmail.com',
     'Phone': '8575368593444',
-    'Position': 'Full Stack Engineer',
+    # 'Position': 'Full Stack',
     'Years': '4',
-    'Referrer': 'xyz company',
+    'Referrer': 'XYZ company',
     'Degree': "Bachelor's degree - Computer Science",
     'Status': 'Yes',
     'Resume': 'url/for/resume',
@@ -92,7 +92,7 @@ def level_2(mat_1):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80, debug=True)
+    app.run(port=8000, debug=True)
 
 # ssh -i ~/Downloads/mike_aws_key_pair.pem ubuntu@ec2-13-59-211-216.us-east-2.compute.amazonaws.com
 # sudo python3 flask_balihoo/resume_balihoo_rest_service.py

@@ -15,7 +15,7 @@ in no particular order, to which applicant's server should respond with an appro
     <li>Click "Test" and our client will test your service.</li>
     <li>Refine your service and re-run the test until you are satisfied with the results.</li>
     <li>When the test passes a "Submit" button will appear below the test results.</li>
-    <li>Click the "Submit" button to submit your application to Balihoo.</li>
+    <li>Click the "Submit" button to submit your application.</li>
 </ul>
 
 ### How to use:

@@ -6,7 +6,7 @@ automated_responses = {
     'Name': 'AB Abhi',
     'Email Address': 'letspython3.x@gmail.com',
     'Phone': '8575368593444',
-    # 'Position': 'Full Stack',
+    'Position': 'Python Developer',
     'Years': '4',
     'Referrer': 'XYZ company',
     'Degree': "Bachelor's degree - Computer Science",
@@ -25,7 +25,8 @@ def index():
     if query in automated_responses:
         return automated_responses[query]
     elif query == 'Puzzle':
-        return solve_puzzle(description)
+        return "Will solve"
+        # return solve_puzzle(description)
     else:
         return "Can't say"
 
@@ -102,3 +103,4 @@ if __name__ == "__main__":
 #     # puzzle = r"ABCD\nA=->-\nB-=-<\nC--->\nD--<-"
 #     # puzzle = r"ABCD\nA--<-\nB-=->\nC--=<\nD-->-"
 #     # puzzle = r"ABCD\nA-<--\nB>=--\nC->--\nD<--="
+

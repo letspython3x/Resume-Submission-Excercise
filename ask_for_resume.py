@@ -34,16 +34,17 @@ queries = (
     },
     {
         'q': 'Status',
-        'd': "What's your experience (in years) ?"
+        'd': "Are you currently employed ?"
     },
     {
         'q': 'Resume',
         'd': 'Provide url for resume'
     },
+
     {
-        'q': 'Ping',
-        'd': 'OK'
-    },
+        'q': 'Puzzle',
+        'd': "ABCD\nA=->-\nB-=<-\nC<---\nD>---"
+    }
 )
 
 
@@ -57,13 +58,24 @@ def query():
     if request.method == 'POST':
         url = request.form.get("url", None)
         if url:
-            result = dict()
-            for query in queries:
-                response = requests.get(url, params=query)
-                key = query.get('q')
-                value = response.text if response.text else "No Response"
-                result[key] = value
-            return render_template("result.html", result=result)
+            query = {
+                'q': 'Ping',
+                'd': 'Ping should recieve OK response to move forward'
+            }
+            ping = requests.get(url, params=query)
+            ping = ping.text if ping.text else "No Response"
+
+            if ping == "OK":
+                result = dict()
+                for query in queries:
+                    response = requests.get(url, params=query)
+                    question = query.get('q')
+                    description = query.get('d')
+                    answer = response.text if response.text else "No Response"
+                    result[question] = (description, answer)
+            else:
+                result = None
+            return render_template("result.html", result=result, response=ping)
 
 
 if __name__ == "__main__":
